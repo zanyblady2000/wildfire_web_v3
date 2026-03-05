@@ -43,9 +43,9 @@ if st.button('Predict Wildfire Within Area'):
   fire_risk_label = "High" if prediction == 1 else "Low"
 
   if fire_risk_label == "High":
-              st.error(f"Predicted Fire Risk: **{fire_risk_label}**")
-          else:
-              st.success(f"Predicted Fire Risk: **{fire_risk_label}**")
+      st.error(f"Predicted Fire Risk: **{fire_risk_label}**")
+  else:
+     st.success(f"Predicted Fire Risk: **{fire_risk_label}**")
             
   
 
