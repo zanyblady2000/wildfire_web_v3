@@ -21,7 +21,7 @@ def Inputs():
   data = {
         'temp': temp, 
         'humidity': humidity, 
-        'wind_speed': windspeed,
+        'wind_speed': wind_speed,
         'Last Day Since Rain': LDSR,
         'lat': lat, 
         'long': long
