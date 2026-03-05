@@ -3,8 +3,6 @@ import streamlit as st
 import joblib
 import plotly.express as px
 
-title = ("Flame Cast")
-
 rfc = joblib.load('rfc_model.joblib')
 scaler = joblib.load('scaler.joblib')
 
@@ -30,7 +28,7 @@ def Inputs():
         }
   return pd.DataFrame(data, index=[0])
 
-st.title(title)
+st.title("Flame Cast")
 input_df = Inputs()
 
   
