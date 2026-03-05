@@ -26,6 +26,6 @@ def Inputs():
         'lat': lat, 
         'long': long
     }
-    return pd.DataFrame(data, index=[0])
+return pd.DataFrame(data, index=[0])
 
   
