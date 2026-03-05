@@ -7,7 +7,7 @@ rfc = joblib.load('rfc_model.joblib')
 scaler = joblib.load('scaler.joblib')
 
 def Inputs():
-  st.sidebar.header = ("Inputs For Prediction")
+  st.sidebar.header("Inputs For Prediction")
 
   temp = st.sidebar.slider('Temperature (C*)', 15, 35, 0)
   wind_speed = st.sidebar.slider('Wind_Speed (Km/h)', 0, 50, 0)
@@ -28,7 +28,7 @@ def Inputs():
         }
   return pd.DataFrame(data, index=[0])
 
-st.title = ("Flame Cast")
+st.title("Flame Cast")
 input_df = Inputs()
 
   
