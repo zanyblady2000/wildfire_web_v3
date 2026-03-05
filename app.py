@@ -25,7 +25,7 @@ def Inputs():
         'Last Day Since Rain': LDSR,
         'lat': lat, 
         'long': long
-    }
+        }
   return pd.DataFrame(data, index=[0])
 
 st.title = ("Flame Cast")
