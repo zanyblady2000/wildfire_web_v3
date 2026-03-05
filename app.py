@@ -22,6 +22,7 @@ def Inputs():
           'temp': temp, 
           'humidity': humidity, 
           'windspeed': windspeed,
+          'Last Day Since Rain': LDSR
           'lat': lat, 
           'long': long
       }
