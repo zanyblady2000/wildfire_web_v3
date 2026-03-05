@@ -18,14 +18,14 @@ def Inputs():
   lat = st.sidebar.slider('Latitude', 50, 59, 55)
   long = st.sidebar.slider('Longitude', -124, -113, -118)
 
-   data = {
-          'temp': temp, 
-          'humidity': humidity, 
-          'windspeed': windspeed,
-          'Last Day Since Rain': LDSR
-          'lat': lat, 
-          'long': long
-      }
-      return pd.DataFrame(data, index=[0])
+  data = {
+        'temp': temp, 
+        'humidity': humidity, 
+        'windspeed': windspeed,
+        'Last Day Since Rain': LDSR
+        'lat': lat, 
+         'long': long
+    }
+    return pd.DataFrame(data, index=[0])
 
   
