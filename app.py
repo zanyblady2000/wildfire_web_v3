@@ -24,7 +24,7 @@ def Inputs():
         'windspeed': windspeed,
         'Last Day Since Rain': LDSR
         'lat': lat, 
-         'long': long
+        'long': long
     }
     return pd.DataFrame(data, index=[0])
 
