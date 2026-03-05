@@ -10,8 +10,8 @@ def Inputs():
   st.sidebar.header("Inputs For Prediction")
 
   temp = st.sidebar.slider('Temperature (C*)', 15, 35, 16)
-  wind_speed = st.sidebar.slider('wind_Speed (Km/h)', 0, 50, 1)
   humidity = st.sidebar.slider('Humidity (%)', 0, 100, 1)
+  wind_speed = st.sidebar.slider('wind_Speed (Km/h)', 0, 50, 1)
   LDSR = st.sidebar.slider('Last Day Since Rain)', 0, 7, 1)
 
   st.sidebar.subheader("Location Inputs")
@@ -30,5 +30,16 @@ def Inputs():
 
 st.title("Flame Cast")
 input_df = Inputs()
+
+if st.button('Predict Wildfire Within Area'):
+  prediction_data = input_df[['temp', 'humidity', 'wind_speed', 'LDSR']]
+  scaled_input = scaler.transform(prediction_data)
+
+  prediction = rfc.predict(scaled_input)
+
+  prediction_label = {0: 'Low Chance of Fire', 1: 'High Chance of Fire'}
+
+  st.subheader("Predicted Result:")
+  
 
   
