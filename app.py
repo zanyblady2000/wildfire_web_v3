@@ -9,12 +9,12 @@ scaler = joblib.load('scaler.joblib')
 def Inputs():
   st.sidebar.header = ("Inputs For Prediction")
 
-  temp = st.sidebar.slider = ('Temperature (C*)', 15, 35, 0)
-  wind_speed = st.sidebar.slider = ('Wind_Speed (Km/h)', 0, 50, 0)
-  humidity = st.sidebar.slider = ('Humidity (%)', 0, 100, 0)
-  LDSR = st.sidebar.slider = ('Last Day Since Rain)', 0, 7, 0)
+  temp = st.sidebar.slider('Temperature (C*)', 15, 35, 0)
+  wind_speed = st.sidebar.slider('Wind_Speed (Km/h)', 0, 50, 0)
+  humidity = st.sidebar.slider('Humidity (%)', 0, 100, 0)
+  LDSR = st.sidebar.slider('Last Day Since Rain)', 0, 7, 0)
 
-  st.sidebar.subheader = ("Location Inputs")
+  st.sidebar.subheader("Location Inputs")
   lat = st.sidebar.slider('Latitude', 50, 59, 55)
   long = st.sidebar.slider('Longitude', -124, -113, -118)
 
