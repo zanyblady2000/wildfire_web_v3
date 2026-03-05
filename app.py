@@ -8,4 +8,6 @@ scaler = joblib.load('scaler.joblib')
 
 def Inputs():
   st.sidebar.header = ("Inputs For Prediction")
+
+  temp = st.sidebar.slider = ('Temperature (C*)', 15, 35, 0)
   
