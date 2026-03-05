@@ -28,4 +28,7 @@ def Inputs():
     }
   return pd.DataFrame(data, index=[0])
 
+st.title = ("Flame Cast")
+input_df = Inputs()
+
   
