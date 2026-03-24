@@ -46,6 +46,26 @@ if st.button('Predict Wildfire Within Area'):
       st.error(f"Predicted Fire Risk: **{fire_risk_label}**")
   else:
      st.success(f"Predicted Fire Risk: **{fire_risk_label}**")
+
+   map_df = input_df.copy()
+   map_df['prediction_label'] = label[prediction]
+        
+       
+        fig = px.scatter_mapbox(
+            map_df, 
+            lat="lat",
+            lon="long", 
+            color="prediction_label", 
+            color_discrete_map={label[1]: 'red', label[0]: 'green'},
+            zoom=8, 
+            center={"lat": map_df['lat'].iloc[0], "lon": map_df['long'].iloc[0]},
+            height=500,
+            mapbox_style="carto-positron", 
+            hover_data=['temp', 'humidity', 'windspeed']
+        )
+        
+        st.subheader("Location Visualization")
+        st.plotly_chart(fig, use_container_width=True)
             
   
 
