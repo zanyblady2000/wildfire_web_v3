@@ -51,7 +51,7 @@ if st.button('Predict Wildfire Within Area'):
   map_df['prediction_label'] = label[prediction]
         
        
-        fig = px.scatter_mapbox(
+  fig = px.scatter_mapbox(
             map_df, 
             lat="lat",
             lon="long", 
