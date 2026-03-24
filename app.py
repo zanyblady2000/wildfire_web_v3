@@ -64,8 +64,8 @@ if st.button('Predict Wildfire Within Area'):
             hover_data=['temp', 'humidity', 'windspeed']
         )
         
-        st.subheader("Location Visualization")
-        st.plotly_chart(fig, use_container_width=True)
+ st.subheader("Location Visualization")
+ st.plotly_chart(fig, use_container_width=True)
             
   
 
