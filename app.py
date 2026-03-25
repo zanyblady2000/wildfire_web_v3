@@ -45,11 +45,13 @@ with tab1:
 
   Aug_df = pd.DataFrame(Aug_data)
 
+  Aug_df.index = np.arange(1, 32)
+  Aug_df.index.name = "Day"
 
   order = ["Aug_Temp", "Aug_Humidity", "Aug_Windspeed"]
   Aug_df = Aug_df[order]
 
-  st.table(Aug_df.iloc[1])  
+  st.table(Aug_df)  
   
   
 
