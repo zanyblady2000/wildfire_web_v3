@@ -38,10 +38,10 @@ with tab1:
   st.header("Data For August")
 
   Aug_data = {
-    "Aug_Temp": np.random.randint(15, 35, size=31),
-    "Aug_Humidity": np.random.randint(0, 100, size=31),
-    "Aug_Windspeed": np.random.randint(0, 50, size=31),
-    "Aug_LDSR": np.random.randint(0, 7, size=31)
+    "temp": np.random.randint(15, 35, size=31),
+    "humidity": np.random.randint(0, 100, size=31),
+    "windspeed": np.random.randint(0, 50, size=31),
+    "LDSR": np.random.randint(0, 7, size=31)
   }
 
   Aug_df = pd.DataFrame(Aug_data)
@@ -49,11 +49,11 @@ with tab1:
   Aug_df.index = np.arange(1, 32)
   Aug_df.index.name = "Day"
 
-  Aug_prediction_data = Aug_df[['Aug_Temp', 'Aug_Humidity', 'Aug_Windspeed', 'Aug_LDSR']]
+  Aug_prediction_data = Aug_df[['temp', 'humidity', 'windspeed', 'LDSR']]
   Aug_scaled_input = scaler.transform(Aug_prediction_data)
   Aug_prediction = rfc.predict(Aug_scaled_inputed)
 
-  order = ["Aug_Temp", "Aug_Humidity", "Aug_Windspeed", "Aug_LDSR"]
+  order = ["temp", "humidity", "windspeed", "LDSR"]
   Aug_df = Aug_df[order]
 
   st.table(Aug_df)  
