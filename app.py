@@ -41,7 +41,7 @@ with tab1:
     "Aug_Temp": np.random.randint(15, 35, size=31),
     "Aug_Humidity": np.random.randint(0, 100, size=31),
     "Aug_Windspeed": np.random.randint(0, 50, size=31)
-  },
+  }
   
   Aug_df = pd.DataFrame([Aug_data])
 
