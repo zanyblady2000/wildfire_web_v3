@@ -87,8 +87,8 @@ with tab2:
 
   Sept_df["Aug_prediction"] = Sept_prediction 
   
-  order = ["temp", "humidity", "windspeed", "LDSR", "Sept_prediction"]
-  Sept_df = Sept_df[order]
+  order_2 = ["temp", "humidity", "windspeed", "LDSR", "Sept_prediction"]
+  Sept_df = Sept_df[order_2]
 
   st.table(Sept_df)
   
