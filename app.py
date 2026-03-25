@@ -32,6 +32,7 @@ def Inputs():
   return pd.DataFrame(data, index=[0])
 
 st.title("Flame Cast")
+st.subheader("The Wildfire Predictor")
 input_df = Inputs()
 
 tab1, tab2 = st.tabs(["August", "September"])
