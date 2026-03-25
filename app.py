@@ -43,7 +43,7 @@ with tab1:
     "Aug_Windspeed": np.random.randint(0, 50)
   }
 
-  Aug_df = pd.DataFrame("Aug_data")
+  Aug_df = pd.DataFrame([Aug_data])
   
   
 
