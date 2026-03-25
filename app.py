@@ -53,7 +53,11 @@ with tab1:
   Aug_scaled_input = scaler.transform(Aug_prediction_data)
   Aug_prediction = rfc.predict(Aug_scaled_input)
 
-  order = ["temp", "humidity", "windspeed", "LDSR"]
+  Aug_prediction_label = {0: 'High Risk', 1: 'Low Risk'}
+
+  Aug_data["Prediction") = Aug_prediction_label
+  
+  order = ["temp", "humidity", "windspeed", "LDSR", "Aug_prediction_label"]
   Aug_df = Aug_df[order]
 
   st.table(Aug_df)  
