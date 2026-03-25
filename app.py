@@ -55,7 +55,7 @@ with tab1:
 
   Aug_prediction_label = {0: 'High Risk', 1: 'Low Risk'}
 
-  Aug_data["Prediction"] = Aug_prediction_label
+  Aug_df["Prediction"] = Aug_prediction_label
   
   order = ["temp", "humidity", "windspeed", "LDSR", "Aug_prediction"]
   Aug_df = Aug_df[order]
