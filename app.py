@@ -2,6 +2,7 @@ import pandas as pd
 import streamlit as st
 import joblib
 import plotly.express as px
+import np as numpy
 
 rfc = joblib.load('rfc_model.joblib')
 scaler = joblib.load('scaler.joblib')
