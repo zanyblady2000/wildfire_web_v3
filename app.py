@@ -32,7 +32,7 @@ def Inputs():
 st.title("Flame Cast")
 input_df = Inputs()
 
-tab1, tab2 = st.tabs(["August, September"])
+tab1, tab2 = st.tabs(["August", "September"])
 
 with tab1:
   st.header("Data For August")
