@@ -46,7 +46,7 @@ with tab1:
 
   Aug_df = pd.DataFrame([Aug_data])
 
-  st.table(Aug_df)
+  st.table(Aug_df.T)
   
   
 
