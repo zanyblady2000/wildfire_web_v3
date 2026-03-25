@@ -31,6 +31,19 @@ def Inputs():
 st.title("Flame Cast")
 input_df = Inputs()
 
+tab1, tab2 = st.tabs(["August, September"])
+
+with tab1:
+  st.header("Data For August")
+
+  Aug_data = {
+    'Aug_Temp' = np.random.randint(15, 35)
+    'Aug_Humidity' = np.random.randint(0, 100)
+    'Aug_Windspeed' = np.random_randint(0, 50)
+
+  Aug_df = pd.Dataframe(Aug_data)
+  
+
 if st.button('Predict Wildfire Within Area'):
   prediction_data = input_df[['temp', 'humidity', 'windspeed', 'LDSR']]
   scaled_input = scaler.transform(prediction_data)
