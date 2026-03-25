@@ -35,9 +35,7 @@ st.title("Flame Cast")
 st.subheader("The Wildfire Predictor")
 input_df = Inputs()
 
-st.write("Flamecast is an innovative application idea created to predict wildfires,
-which are a known problem throughout Canada and beyond and can be extremely unpredictable. Flamecast will predict the possibility of wildfires by using realtime weather data including temperature, wind speed, and last day since rain.
-")
+st.write("Flamecast is an innovative application idea created to predict wildfires, which are a known problem throughout Canada and beyond and can be extremely unpredictable. Flamecast will predict the possibility of wildfires by using realtime weather data including temperature, wind speed, and last day since rain.")
 
 tab1, tab2 = st.tabs(["August", "September"])
 
