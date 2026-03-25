@@ -4,6 +4,8 @@ import joblib
 import plotly.express as px
 import numpy as np
 
+np.random.seed(42)
+
 rfc = joblib.load('rfc_model.joblib')
 scaler = joblib.load('scaler.joblib')
 
