@@ -49,7 +49,7 @@ with tab1:
   custom_order = ["Aug_Windspeed", "Aug_Temp", "Aug_Humidity"]
   Aug_df = Aug_df[custom_order]
 
-  st.table(Aug_df.iloc[0].T)  
+  st.table(Aug_df.iloc[0])  
   
   
 
