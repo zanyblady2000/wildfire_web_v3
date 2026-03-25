@@ -48,7 +48,7 @@ with tab1:
   Aug_df.index = np.arange(1, 32)
   Aug_df.index.name = "Day"
 
-  Aug_prediction_data = Aug_df['Aug_Temp', 'Aug_Humidity', 'Aug_Windspeed']
+  Aug_prediction_data = Aug_df[['Aug_Temp', 'Aug_Humidity', 'Aug_Windspeed']]
   Aug_scaled_input = scaler.transform(Aug_prediction_data)
   Aug_prediction = rfc.predict(Aug_scaled_inputed)
 
