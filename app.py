@@ -85,7 +85,7 @@ with tab2:
 
   Sept_prediction_label = {0: 'High Risk', 1: 'Low Risk'}
 
-  Sept_df["Aug_prediction"] = Sept_prediction 
+  Sept_df["Sept_prediction"] = Sept_prediction 
   
   order_2 = ["temp", "humidity", "windspeed", "LDSR", "Sept_prediction"]
   Sept_df = Sept_df[order_2]
