@@ -57,7 +57,7 @@ with tab1:
 
   Aug_data["Prediction"] = Aug_prediction_label
   
-  order = ["temp", "humidity", "windspeed", "LDSR", "Aug_prediction_label"]
+  order = ["temp", "humidity", "windspeed", "LDSR", "Aug_prediction"]
   Aug_df = Aug_df[order]
 
   st.table(Aug_df)  
