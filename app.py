@@ -62,7 +62,35 @@ with tab1:
   order = ["temp", "humidity", "windspeed", "LDSR", "Aug_prediction"]
   Aug_df = Aug_df[order]
 
-  st.table(Aug_df)  
+  st.table(Aug_df)
+
+with tab2:
+  st.header("Data For September")
+
+  Sept_data = {
+    "temp": np.random.randint(15, 35, size=31),
+    "humidity": np.random.randint(0, 100, size=31),
+    "windspeed": np.random.randint(0, 50, size=31),
+    "LDSR": np.random.randint(0, 7, size=31)
+  }
+
+  Sept_df = pd.DataFrame(Sept_data)
+
+  Sept_df.index = np.arange(1, 32)
+  Sept_df.index.name = "Day"
+
+  Sept_prediction_data = Sept_df[['temp', 'humidity', 'windspeed', 'LDSR']]
+  Sept_scaled_input = scaler.transform(Sept_prediction_data)
+  Sept_prediction = rfc.predict(Sept_scaled_input)
+
+  Sept_prediction_label = {0: 'High Risk', 1: 'Low Risk'}
+
+  Sept_df["Aug_prediction"] = Sept_prediction 
+  
+  order = ["temp", "humidity", "windspeed", "LDSR", "Sept_prediction"]
+  Sept_df = Sept_df[order]
+
+  st.table(Sept_df)
   
 if st.button('Predict Wildfire Within Area'):
   prediction_data = input_df[['temp', 'humidity', 'windspeed', 'LDSR']]
