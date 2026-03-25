@@ -46,10 +46,10 @@ with tab1:
   Aug_df = pd.DataFrame(Aug_data)
 
 
-  custom_order = ["Aug_Windspeed", "Aug_Temp", "Aug_Humidity"]
-  Aug_df = Aug_df[custom_order]
+  order = ["Aug_Temp", "Aug_Humidity", "Aug_Windspeed"]
+  Aug_df = Aug_df[order]
 
-  st.table(Aug_df.iloc[0])  
+  st.table(Aug_df.iloc[1])  
   
   
 
