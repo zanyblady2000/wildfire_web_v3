@@ -2,7 +2,7 @@ import pandas as pd
 import streamlit as st
 import joblib
 import plotly.express as px
-import np as numpy
+import numpy as np
 
 rfc = joblib.load('rfc_model.joblib')
 scaler = joblib.load('scaler.joblib')
@@ -38,9 +38,9 @@ with tab1:
   st.header("Data For August")
 
   Aug_data = {
-    Aug_Temp == np.random.randint(15, 35)
-    Aug_Humidity == np.random.randint(0, 100)
-    Aug_Windspeed == np.random_randint(0, 50)
+    Aug_Temp = np.random.randint(15, 35)
+    Aug_Humidity = np.random.randint(0, 100)
+    Aug_Windspeed = np.random_randint(0, 50)
   }
 
   Aug_df = pd.Dataframe("Aug_data")
