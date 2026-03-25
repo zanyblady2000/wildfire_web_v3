@@ -31,7 +31,7 @@ def Inputs():
         }
   return pd.DataFrame(data, index=[0])
 
-st.title("Flame Cast", "Center")
+st.title("Flame Cast", "center")
 st.subheader("The Wildfire Predictor")
 input_df = Inputs()
 
