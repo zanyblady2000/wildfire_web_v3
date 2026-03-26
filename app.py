@@ -50,8 +50,8 @@ with tab1:
     "humidity": np.random.randint(0, 100, size=31),
     "windspeed": np.random.randint(0, 50, size=31),
     "LDSR": np.random.randint(0, 7, size=31),
-    "lat": rng.random(50, 59, size=31),
-    "long": rng.random(-124, -113, size=31)
+    "lat": Aug_rng.random(50, 59, size=31),
+    "long": Aug_rng.random(-124, -113, size=31)
   }
 
   Aug_df = pd.DataFrame(Aug_data)
