@@ -136,7 +136,7 @@ with tab2:
   )
 
   
-  st.title("August Fire Risk Map")
+  st.title("September Fire Risk Map")
   st.plotly_chart(Sept_data_fig)
 
 st.header("Sidebar Prediction Scenario")
