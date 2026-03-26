@@ -75,6 +75,9 @@ with tab1:
   else:
     Aug_label_color = st.success
 
+  Aug_map_df = aug_df.copy()
+  Aug_map_df[Aug_label_color] = Aug_label_color
+
   Aug_data_fig = px.scatter_mapbox(
     Aug_df,
     lat="lat",
