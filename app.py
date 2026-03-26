@@ -74,7 +74,8 @@ with tab1:
     Aug_df,
     lat="lat",
     lon="long",
-    zoom=8
+    zoom=8,
+    height=500
   )
 
   Aug_data_fig.update_layout(mapbox_style="open-street-map")
