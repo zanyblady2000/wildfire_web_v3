@@ -83,7 +83,7 @@ with tab1:
     color_discrete_map={"High Risk": 'red', "Low Risk": 'green'},
     height=500,
     hover_data=[Aug_df.index],
-    labels={"0": "day"},
+    labels={"_0": "day"},
     mapbox_style="open-street-map"
   )
 
