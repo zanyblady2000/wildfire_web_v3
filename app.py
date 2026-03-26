@@ -43,13 +43,15 @@ tab1, tab2 = st.tabs(["August", "September"])
 with tab1:
   st.header("Data For August")
 
+  Aug_rng = np.random_default_rng()
+
   Aug_data = {
     "temp": np.random.randint(15, 35, size=31),
     "humidity": np.random.randint(0, 100, size=31),
     "windspeed": np.random.randint(0, 50, size=31),
     "LDSR": np.random.randint(0, 7, size=31),
-    "lat": np.random.random(50, 59, size=31),
-    "long": np.random.random(-124, -113, size=31)
+    "lat": rng.random(50, 59, size=31),
+    "long": rng.random(-124, -113, size=31)
   }
 
   Aug_df = pd.DataFrame(Aug_data)
