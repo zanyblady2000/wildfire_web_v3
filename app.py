@@ -73,7 +73,7 @@ with tab1:
   Aug_data_fig = px.scatter_mapbox(
     Aug_df,
     lat="lat",
-    long="long",
+    lon="long",
     color="violet",
     zoom=8
   )
