@@ -43,7 +43,7 @@ tab1, tab2 = st.tabs(["August", "September"])
 with tab1:
   st.header("Data For August")
 
-  Aug_rng = np.random_default_rng()
+  Aug_rng = np.random.default_rng()
 
   Aug_data = {
     "temp": np.random.randint(15, 35, size=31),
