@@ -60,7 +60,7 @@ with tab1:
 
   Aug_prediction_label = {0: 'High Risk', 1: 'Low Risk'}
 
-  Aug_df["Aug_prediction"] = Aug_prediction_label
+  Aug_df["Aug_prediction"] = ["High Risk" if Aug_prediction == 0 else "Low Risk" for p in Aug_prediction]
   
   order = ["temp", "humidity", "windspeed", "LDSR", "Aug_prediction"]
   Aug_df = Aug_df[order]
