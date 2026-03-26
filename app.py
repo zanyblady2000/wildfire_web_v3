@@ -75,10 +75,10 @@ with tab1:
     lat="lat",
     long="long",
     color="violet",
-    zoom=8,
-    mapbox_style="open-street-map"
+    zoom=8
   )
 
+  Aug_data_fig.update_layout(mapbox_style="open-street-map")
   Aug_data_fig.show
   
 with tab2:
