@@ -70,20 +70,15 @@ with tab1:
 
   st.table(Aug_df)
 
-  if Aug_prediction_label == 0:
-    Aug_label_color = st.error
-  else:
-    Aug_label_color = st.success
-
   Aug_map_df = Aug_df.copy()
-  Aug_map_df[Aug_label_color] = Aug_label_color
 
   Aug_data_fig = px.scatter_mapbox(
     Aug_map_df,
     lat="lat",
     lon="long",
     zoom=8,
-    color="Aug_label_color",
+    color="Aug_prediction",
+    color_discrete_map={Aug_prediction[0]: 'red', Aug_prediction[1]: 'green'},
     height=500,
     mapbox_style="open-street-map"
   )
