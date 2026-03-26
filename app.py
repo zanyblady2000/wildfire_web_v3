@@ -31,15 +31,13 @@ def Inputs():
         }
   return pd.DataFrame(data, index=[0])
 
-title_container = st.container(border=True)
-title_container.title("FlameCast")
-
 st.title(":red[Flame]:orange[Cast]", text_alignment="center")
 st.subheader("The Wildfire Predictor")
 input_df = Inputs()
 
 st.write("Flamecast is an innovative application idea created to predict wildfires, which are a known problem throughout Canada and beyond and can be extremely unpredictable. Flamecast will predict the possibility of wildfires by using realtime weather data including temperature, wind speed, and last day since rain.")
 
+st.header("Calendar")
 tab1, tab2 = st.tabs(["August", "September"])
 
 with tab1:
