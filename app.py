@@ -118,7 +118,7 @@ with tab2:
 
   st.table(Sept_df)
   
-if st.button('Predict Wildfire Within Area'):
+if st.button('Predict Wildfire In Area using the Sidebar'):
   prediction_data = input_df[['temp', 'humidity', 'windspeed', 'LDSR']]
   scaled_input = scaler.transform(prediction_data)
 
