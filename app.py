@@ -79,7 +79,7 @@ with tab1:
     mapbox_style="open-street-map"
   )
 
-  Aug_data_fig.show
+  Aug_data_fig.show()
   
 with tab2:
   st.header("Data For September")
