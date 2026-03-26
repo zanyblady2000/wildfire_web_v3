@@ -31,7 +31,10 @@ def Inputs():
         }
   return pd.DataFrame(data, index=[0])
 
-st.title(":red[Flame]:orange[Cast]", text_alignment="center", width="stretch")
+title_container = st.container(border=True)
+title_container.title("FlameCast")
+
+st.title(":red[Flame]:orange[Cast]", text_alignment="center")
 st.subheader("The Wildfire Predictor")
 input_df = Inputs()
 
