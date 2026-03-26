@@ -47,7 +47,9 @@ with tab1:
     "temp": np.random.randint(15, 35, size=31),
     "humidity": np.random.randint(0, 100, size=31),
     "windspeed": np.random.randint(0, 50, size=31),
-    "LDSR": np.random.randint(0, 7, size=31)
+    "LDSR": np.random.randint(0, 7, size=31),
+    "lat": np.random.randint(50, 59),
+    "long": np.random.randint(-124, -113)
   }
 
   Aug_df = pd.DataFrame(Aug_data)
@@ -63,10 +65,13 @@ with tab1:
 
   Aug_df["Aug_prediction"] = ["High Risk" if p == 0 else "Low Risk" for p in Aug_prediction]
   
-  order = ["temp", "humidity", "windspeed", "LDSR", "Aug_prediction"]
+  order = ["temp", "humidity", "windspeed", "LDSR", "lat", "long" "Aug_prediction"]
   Aug_df = Aug_df[order]
 
   st.table(Aug_df)
+
+  Aug_data_fig = px.scatter_mapbox(
+    
 
 with tab2:
   st.header("Data For September")
