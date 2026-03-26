@@ -82,7 +82,7 @@ with tab1:
     color="Aug_prediction",
     color_discrete_map={"High Risk": 'red', "Low Risk": 'green'},
     height=500,
-    hover_data=["Aug_df.index"],
+    hover_data=[Aug_df.index]
     mapbox_style="open-street-map"
   )
 
