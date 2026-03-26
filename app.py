@@ -9,7 +9,7 @@ np.random.seed(42) # Makes it so randomly generated numbers stay the same throug
 rfc = joblib.load('rfc_model.joblib') # Using Joblib to import the trained ML model and scaler.
 scaler = joblib.load('scaler.joblib')
 
-def Inputs(): # Defining prediction inputs and returning said inputs as a DataFrame.
+def Inputs(): # Defining Sidebar prediction inputs and returning said inputs as a DataFrame.
   st.sidebar.header("Inputs For Prediction")
 
   temp = st.sidebar.slider('Temperature (C*)', 15, 35, 20)
@@ -60,7 +60,7 @@ with tab1:
   Aug_df.index = np.arange(1, 32)
   Aug_df.index.name = "Day"
 
-  Aug_prediction_data = Aug_df[['temp', 'humidity', 'windspeed', 'LDSR']]
+  Aug_prediction_data = Aug_df[['temp', 'humidity', 'windspeed', 'LDSR']] # Runs a prediction using the August dataset
   Aug_scaled_input = scaler.transform(Aug_prediction_data)
   Aug_prediction = rfc.predict(Aug_scaled_input)
 
@@ -75,7 +75,7 @@ with tab1:
 
   Aug_map_df = Aug_df.copy()
 
-  Aug_data_fig = px.scatter_mapbox(
+  Aug_data_fig = px.scatter_mapbox( # Makes a visual map out of the Aug data to show every "Day" or row
     Aug_map_df.reset_index(),
     lat="lat",
     lon="long",
@@ -91,7 +91,7 @@ with tab1:
   st.title("August Fire Risk Map")
   st.plotly_chart(Aug_data_fig)
   
-with tab2:
+with tab2: # Everything in the September tab is the same as in the August tab.
   st.header("Data For September")
 
   Sept_rng = np.random.default_rng()
@@ -143,7 +143,7 @@ with tab2:
 
 st.header("Sidebar Prediction Scenario")
   
-if st.button('Predict Wildfire In Nearby Area'):
+if st.button('Predict Wildfire In Nearby Area'): # Uses the showable sidebar inputs to run a prediction.
   prediction_data = input_df[['temp', 'humidity', 'windspeed', 'LDSR']]
   scaled_input = scaler.transform(prediction_data)
 
@@ -163,7 +163,7 @@ if st.button('Predict Wildfire In Nearby Area'):
   map_df['fire_risk_label'] = fire_risk_label
         
        
-  fig = px.scatter_mapbox(
+  fig = px.scatter_mapbox( # Maps out the Sidebar scenario prediction
             map_df, 
             lat="lat",
             lon="long", 
