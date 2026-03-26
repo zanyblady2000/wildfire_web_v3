@@ -76,14 +76,14 @@ with tab1:
 
   Aug_data_fig = px.scatter_mapbox(
     Aug_map_df,
+    Aug_df.reset_index(),
     lat="lat",
     lon="long",
     zoom=4,
     color="Aug_prediction",
     color_discrete_map={"High Risk": 'red', "Low Risk": 'green'},
     height=500,
-    hover_data=[Aug_df.index],
-    labels={"_0": "day"},
+    hover_data=["Day"],
     mapbox_style="open-street-map"
   )
 
