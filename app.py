@@ -70,7 +70,7 @@ with tab1:
 
   st.table(Aug_df)
 
-  if Aug_prediction == 0:
+  a.any(Aug_prediction == 0):
     Aug_prediction_label = st.error
   else:
     Aug_prediction_label = st.success
