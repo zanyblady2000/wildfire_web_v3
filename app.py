@@ -69,8 +69,6 @@ with tab1:
   Aug_df = Aug_df[order]
 
   st.table(Aug_df)
-
-  Aug_data_fig = px.scatter_mapbox(
     
 
 with tab2:
