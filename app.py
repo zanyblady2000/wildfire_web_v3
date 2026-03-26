@@ -32,9 +32,10 @@ def Inputs():
   return pd.DataFrame(data, index=[0])
 
 st.title(":red[Flame]:orange[Cast]", text_alignment="center")
-st.subheader("The Wildfire Predictor")
+st.subheader("The Wildfire Predictor", text_alignment="center")
 input_df = Inputs()
 
+st.subheader("About FlameCast")
 st.write("Flamecast is an innovative application idea created to predict wildfires, which are a known problem throughout Canada and beyond and can be extremely unpredictable. Flamecast will predict the possibility of wildfires by using realtime weather data including temperature, wind speed, and last day since rain.")
 
 st.header("Calendar")
@@ -117,8 +118,10 @@ with tab2:
   Sept_df = Sept_df[order_2]
 
   st.table(Sept_df)
+
+st.header("Sidebar Prediction Scenario")
   
-if st.button('Predict Wildfire In Area using the Sidebar'):
+if st.button('Predict Wildfire In Nearby Area'):
   prediction_data = input_df[['temp', 'humidity', 'windspeed', 'LDSR']]
   scaled_input = scaler.transform(prediction_data)
 
