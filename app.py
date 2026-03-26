@@ -65,7 +65,7 @@ with tab1:
 
   Aug_df["Aug_prediction"] = ["High Risk" if p == 0 else "Low Risk" for p in Aug_prediction]
   
-  order = ["temp", "humidity", "windspeed", "LDSR", "lat", "long" "Aug_prediction"]
+  order = ["temp", "humidity", "windspeed", "LDSR", "lat", "long", "Aug_prediction"]
   Aug_df = Aug_df[order]
 
   st.table(Aug_df)
