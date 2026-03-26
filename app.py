@@ -4,12 +4,12 @@ import joblib
 import plotly.express as px
 import numpy as np
 
-np.random.seed(42)
+np.random.seed(42) # Makes it so randomly generated numbers stay the same throughout every run.
 
-rfc = joblib.load('rfc_model.joblib')
+rfc = joblib.load('rfc_model.joblib') # Using Joblib to import the trained ML model and scaler.
 scaler = joblib.load('scaler.joblib')
 
-def Inputs():
+def Inputs(): # Defining prediction inputs and returning said inputs as a DataFrame.
   st.sidebar.header("Inputs For Prediction")
 
   temp = st.sidebar.slider('Temperature (C*)', 15, 35, 20)
@@ -41,17 +41,17 @@ st.write("Flamecast is an innovative application idea created to predict wildfir
 st.header("Calendar")
 tab1, tab2 = st.tabs(["August", "September"])
 
-with tab1:
+with tab1: 
   st.header("Data For August")
 
-  Aug_rng = np.random.default_rng()
+  Aug_rng = np.random.default_rng() # Defines a random number generator
 
   Aug_data = {
-    "temp": np.random.randint(15, 35, size=31),
+    "temp": np.random.randint(15, 35, size=31), # randint = random integer and size=31 means it will generate only 31 different random integers
     "humidity": np.random.randint(0, 100, size=31),
     "windspeed": np.random.randint(0, 50, size=31),
     "LDSR": np.random.randint(0, 7, size=31),
-    "lat": Aug_rng.uniform(50, 59, size=31),
+    "lat": Aug_rng.uniform(50, 59, size=31), # Uses the Random number generator to generate decimal numbers
     "long": Aug_rng.uniform(-124, -113, size=31)
   }
 
@@ -94,13 +94,15 @@ with tab1:
 with tab2:
   st.header("Data For September")
 
+  Sept_rng = np.random.default_rng()
+
   Sept_data = {
     "temp": np.random.randint(15, 35, size=31),
     "humidity": np.random.randint(0, 100, size=31),
     "windspeed": np.random.randint(0, 50, size=31),
     "LDSR": np.random.randint(0, 7, size=31),
-    "lat": Aug_rng.uniform(50, 59, size=31),
-    "long": Aug_rng.uniform(-124, -113, size=31)
+    "lat": Sept_rng.uniform(50, 59, size=31),
+    "long": Sept_rng.uniform(-124, -113, size=31)
   }
 
   Sept_df = pd.DataFrame(Sept_data)
