@@ -104,7 +104,7 @@ if st.button('Predict Wildfire Within Area'):
   prediction_label = {0: 'Low Chance of Fire', 1: 'High Chance of Fire'}
 
   st.subheader("Predicted Result:")
-  fire_risk_label = "High" if prediction[0] == 1 else "Low"
+  fire_risk_label = "Low" if prediction[0] == 1 else "High"
 
   if fire_risk_label == "High":
       st.error(f"Predicted Fire Risk: **{fire_risk_label}**")
@@ -112,7 +112,7 @@ if st.button('Predict Wildfire Within Area'):
      st.success(f"Predicted Fire Risk: **{fire_risk_label}**")
 
   map_df = input_df.copy()
-  map_df['fire_risk_label'] = fire_risk_label[prediction]
+  map_df['fire_risk_label'] = fire_risk_label
         
        
   fig = px.scatter_mapbox(
