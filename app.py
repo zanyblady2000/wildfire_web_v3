@@ -72,7 +72,7 @@ with tab1:
 
   if Aug_prediction == 0:
     Aug_prediction_label = st.error
-  else
+  else:
     Aug_prediction_label = st.success
 
   Aug_data_fig = px.scatter_mapbox(
