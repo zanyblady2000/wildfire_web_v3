@@ -104,7 +104,7 @@ if st.button('Predict Wildfire Within Area'):
   prediction_label = {0: 'Low Chance of Fire', 1: 'High Chance of Fire'}
 
   st.subheader("Predicted Result:")
-  fire_risk_label = "Low" if prediction[0] == 1 else "High"
+  fire_risk_label = "High" if prediction[0] == 1 else "Low"
 
   if fire_risk_label == "High":
       st.error(f"Predicted Fire Risk: **{fire_risk_label}**")
@@ -120,7 +120,7 @@ if st.button('Predict Wildfire Within Area'):
             lat="lat",
             lon="long", 
             color="fire_risk_label", 
-            color_discrete_map={fire_risk_label[1]: 'red', fire_risk_label[0]: 'green'},
+            color_discrete_map={fire_risk_label[0]: 'red', fire_risk_label[1]: 'green'},
             zoom=8, 
             center={"lat": map_df['lat'].iloc[0], "lon": map_df['long'].iloc[0]},
             height=500,
