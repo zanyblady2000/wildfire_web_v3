@@ -70,11 +70,17 @@ with tab1:
 
   st.table(Aug_df)
 
+  Aug_label_color = if Aug_prediction_label == 0:
+    st.error
+  else
+    st.success
+
   Aug_data_fig = px.scatter_mapbox(
     Aug_df,
     lat="lat",
     lon="long",
     zoom=8,
+    color="Aug_label_color",
     height=500,
     mapbox_style="open-street-map"
   )
