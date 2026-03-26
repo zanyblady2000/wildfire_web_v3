@@ -75,7 +75,6 @@ with tab1:
   Aug_map_df = Aug_df.copy()
 
   Aug_data_fig = px.scatter_mapbox(
-    Aug_map_df,
     Aug_map_df.reset_index(),
     lat="lat",
     lon="long",
