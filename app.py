@@ -74,7 +74,6 @@ with tab1:
     Aug_df,
     lat="lat",
     lon="long",
-    color="violet",
     zoom=8
   )
 
