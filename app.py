@@ -108,7 +108,7 @@ with tab2:
   Sept_df.index = np.arange(1, 32)
   Sept_df.index.name = "Day"
 
-  Sept_prediction_data = Sept_df[["temp", "humidity", "windspeed", "LDSR", "lat", "long", "Sept_prediction"]]
+  Sept_prediction_data = Sept_df[["temp", "humidity", "windspeed", "LDSR"]]
   Sept_scaled_input = scaler.transform(Sept_prediction_data)
   Sept_prediction = rfc.predict(Sept_scaled_input)
 
@@ -116,7 +116,7 @@ with tab2:
 
   Sept_df["Sept_prediction"] = ["High Risk" if p == 0 else "Low Risk" for p in Sept_prediction]
   
-  order_2 = ["temp", "humidity", "windspeed", "LDSR", "Sept_prediction"]
+  order_2 = ["temp", "humidity", "windspeed", "LDSR", "lat", "long", "Sept_prediction"]
   Sept_df = Sept_df[order_2]
 
   st.table(Sept_df)
