@@ -85,6 +85,8 @@ with tab1:
     mapbox_style="open-street-map"
   )
 
+  
+  st.title("August Fire Risk Map")
   st.plotly_chart(Aug_data_fig)
   
 with tab2:
