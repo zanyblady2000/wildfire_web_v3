@@ -79,7 +79,7 @@ with tab1:
     mapbox_style="open-street-map"
   )
 
-  Aug_data_fig.show()
+  st.plotly_chart(Aug_data_fig)
   
 with tab2:
   st.header("Data For September")
