@@ -70,10 +70,10 @@ with tab1:
 
   st.table(Aug_df)
 
-  a.any(Aug_prediction == 0):
-    Aug_prediction_label = st.error
+  if Aug_prediction_label == 0:
+    Aug_label_color = st.error
   else:
-    Aug_prediction_label = st.success
+    Aug_label_color = st.success
 
   Aug_data_fig = px.scatter_mapbox(
     Aug_df,
