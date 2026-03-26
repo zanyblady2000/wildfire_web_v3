@@ -98,7 +98,9 @@ with tab2:
     "temp": np.random.randint(15, 35, size=31),
     "humidity": np.random.randint(0, 100, size=31),
     "windspeed": np.random.randint(0, 50, size=31),
-    "LDSR": np.random.randint(0, 7, size=31)
+    "LDSR": np.random.randint(0, 7, size=31),
+    "lat": Aug_rng.uniform(50, 59, size=31),
+    "long": Aug_rng.uniform(-124, -113, size=31)
   }
 
   Sept_df = pd.DataFrame(Sept_data)
@@ -106,7 +108,7 @@ with tab2:
   Sept_df.index = np.arange(1, 32)
   Sept_df.index.name = "Day"
 
-  Sept_prediction_data = Sept_df[['temp', 'humidity', 'windspeed', 'LDSR']]
+  Sept_prediction_data = Sept_df[["temp", "humidity", "windspeed", "LDSR", "lat", "long", "Sept_prediction"]
   Sept_scaled_input = scaler.transform(Sept_prediction_data)
   Sept_prediction = rfc.predict(Sept_scaled_input)
 
@@ -118,6 +120,24 @@ with tab2:
   Sept_df = Sept_df[order_2]
 
   st.table(Sept_df)
+
+  Sept_map_df = Sept_df.copy()
+
+  Sept_data_fig = px.scatter_mapbox(
+    Sept_map_df.reset_index(),
+    lat="lat",
+    lon="long",
+    zoom=4,
+    color="Sept_prediction",
+    color_discrete_map={"High Risk": 'red', "Low Risk": 'green'},
+    height=500,
+    hover_data=["Day"],
+    mapbox_style="open-street-map"
+  )
+
+  
+  st.title("August Fire Risk Map")
+  st.plotly_chart(Sept_data_fig)
 
 st.header("Sidebar Prediction Scenario")
   
