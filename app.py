@@ -75,7 +75,7 @@ with tab1:
     lat="lat",
     long="long",
     color="violet",
-    zoom="8"
+    zoom=8
   )
 
   Aug_data_fig.show
