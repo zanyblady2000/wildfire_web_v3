@@ -69,8 +69,17 @@ with tab1:
   Aug_df = Aug_df[order]
 
   st.table(Aug_df)
-    
 
+  Aug_data_fig = px.scatter_mapbox(
+    Aug_df,
+    lat="lat",
+    long="long",
+    color="violet",
+    zoom="8"
+  )
+
+  Aug_data_fig.show
+  
 with tab2:
   st.header("Data For September")
 
