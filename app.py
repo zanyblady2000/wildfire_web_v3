@@ -78,7 +78,7 @@ with tab1:
     Aug_map_df,
     lat="lat",
     lon="long",
-    zoom=8,
+    zoom=4,
     color="Aug_prediction",
     color_discrete_map={"High Risk": 'red', "Low Risk": 'green'},
     height=500,
