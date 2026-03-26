@@ -75,7 +75,8 @@ with tab1:
     lat="lat",
     long="long",
     color="violet",
-    zoom=8
+    zoom=8,
+    mapbox_style="open-street-map"
   )
 
   Aug_data_fig.show
