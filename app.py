@@ -80,7 +80,7 @@ with tab1:
     lon="long",
     zoom=8,
     color="Aug_prediction",
-    color_discrete_map={Aug_prediction[0]: 'red', Aug_prediction[1]: 'green'},
+    color_discrete_map={"High Risk": 'red', "Low Risk": 'green'},
     height=500,
     mapbox_style="open-street-map"
   )
