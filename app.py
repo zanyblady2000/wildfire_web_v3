@@ -64,9 +64,9 @@ with tab1:
   Aug_scaled_input = scaler.transform(Aug_prediction_data)
   Aug_prediction = rfc.predict(Aug_scaled_input)
 
-  Aug_prediction_label = {0: 'High Risk', 1: 'Low Risk'}
+  Aug_prediction_label = {0: 'Low Risk', 1: 'High Risk'}
 
-  Aug_df["Aug_prediction"] = ["High Risk" if p == 0 else "Low Risk" for p in Aug_prediction]
+  Aug_df["Aug_prediction"] = ["Low Risk" if p == 0 else "High Risk" for p in Aug_prediction]
   
   order = ["temp", "humidity", "windspeed", "LDSR", "lat", "long", "Aug_prediction"]
   Aug_df = Aug_df[order]
@@ -114,9 +114,9 @@ with tab2: # Everything in the September tab is the same as in the August tab.
   Sept_scaled_input = scaler.transform(Sept_prediction_data)
   Sept_prediction = rfc.predict(Sept_scaled_input)
 
-  Sept_prediction_label = {0: 'High Risk', 1: 'Low Risk'}
+  Sept_prediction_label = {0: 'Low Risk', 1: 'High Risk'}
 
-  Sept_df["Sept_prediction"] = ["High Risk" if p == 0 else "Low Risk" for p in Sept_prediction]
+  Sept_df["Sept_prediction"] = ["Low Risk" if p == 0 else "High Risk" for p in Sept_prediction]
   
   order_2 = ["temp", "humidity", "windspeed", "LDSR", "lat", "long", "Sept_prediction"]
   Sept_df = Sept_df[order_2]
