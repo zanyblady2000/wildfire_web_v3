@@ -152,7 +152,7 @@ if st.button('Predict Wildfire In Nearby Area'): # Uses the showable sidebar inp
   prediction_label = {0: 'Low Chance of Fire', 1: 'High Chance of Fire'}
 
   st.subheader("Predicted Result:")
-  fire_risk_label = "High" if prediction[0] == 1 else "Low"
+  fire_risk_label = "Low" if prediction[0] == 1 else "High"
 
   if fire_risk_label == "High":
       st.error(f"Predicted Fire Risk: **{fire_risk_label}**")
