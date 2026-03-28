@@ -60,11 +60,6 @@ with tab1:
   Aug_df.index = np.arange(1, 32)
   Aug_df.index.name = "Day"
 
-  Aug_df.at[1, 'temp'] = 35
-  Aug_df.at[1, 'humidity'] = 5
-  Aug_df.at[1, 'windspeed'] = 45
-  Aug_df.at[1, 'LDSR'] = 7
-
   Aug_prediction_data = Aug_df[['temp', 'humidity', 'windspeed', 'LDSR']] # Runs a prediction using the August dataset
   Aug_scaled_input = scaler.transform(Aug_prediction_data)
   Aug_prediction = rfc.predict(Aug_scaled_input)
