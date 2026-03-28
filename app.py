@@ -168,7 +168,7 @@ if st.button('Predict Wildfire In Nearby Area'): # Uses the showable sidebar inp
             lat="lat",
             lon="long", 
             color="fire_risk_label", 
-            color_discrete_map={"High": 'red', "Low": 'green'}
+            color_discrete_map={"High": 'red', "Low": 'green'},
             zoom=8, 
             height=500,
             mapbox_style="open-street-map", 
